@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="static/font/font.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/filepond/css/normalize.min.css">
+    <link rel="stylesheet" href="static/filepond/css/filepond-plugin-image-preview.min.css">
+    <link rel="stylesheet" href="static/filepond/css/filepond.min.css">
+    <link rel="stylesheet" href="static/filepond/css/FilePondProfile.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <script src="static/jquery/jquery.min.js"></script>
+
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="static/country-region-dropdown-menu/assets/js/geodatasource-cr.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="static/country-region-dropdown-menu/assets/css/geodatasource-countryflag.css">
+
+    <link rel="gettext" type="application/x-po" href="static/country-region-dropdown-menu/languages/en/LC_MESSAGES/en.po" />
+    <script type="text/javascript" src="static/country-region-dropdown-menu/assets/js/Gettext.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+    <script src="https://kit.fontawesome.com/577845f6a5.js" 
+        crossorigin="anonymous"> 
+    </script> 
+  
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"> 
+    </script> 
+    <script src= 
+"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"> 
+    </script> 
+    <script src= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"> 
+    </script> 
+
+
+
+
+</head>
+<body>
+
+       <div class="main-w3layouts wrapper">
+        <h1>Creative SignUp Form</h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form action="/SignUp" method="post">
+                  <input type="file" 
+                  class="filepond"
+                  name="profileimg"
+                  accept="image/png, image/jpeg, image/gif"/>
+                  <div style="color: rgb(235, 108, 108); margin-left: 35%; margin-top: 0.8%;" ><%if(checkimg){%>
+                    <%=errorimg%>
+                    <%}%>
+                    </div>
+                  <br>
+
+
+                    <div class="row" style="width: 104%;">
+                        <div class="col">
+                    <input class="text  " type="text" name="FirstName" placeholder="First name" value="<%if(checkimg||checkeduser ||checkedemail){%><%=users.FirstName%><%}%>"  required="Enter your FirstName">
+                        </div>
+                        <div class="col">
+                    <input class="text" type="text" name="LastName" placeholder="Last name" value="<%if(checkimg||checkeduser ||checkedemail){%><%=users.LastName%><%}%>"  required="Enter your LastName">
+                        </div>
+                    </div>
+                     
+      <select class=" gds-cr custom-select mr-sm-3 country " data-live-search="true" data-live-search-style="startsWith" name="country"  style="background-color: #5c52b8; color:white; margin-top:10% ; margin-bottom: 10%; width: 94%;" country-data-region-id="gds-cr-one" data-language="en" required="chosen your country"></select>
+
+      
+      <select id="gds-cr-one" class="custom-select mr-sm-3 city " name="city" style="background-color: #5c52b8; color:white; display: none;  margin-bottom: 10%; width: 94%;" required= "chosen your Sity"></select>
+                    
+
+
+                    <input class="text username " type="text" name="User" placeholder="Username" value="<%if(checkimg||checkeduser ||checkedemail){%><%=users.username%><%}%>"  required="Enter your UserName">
+                    <div style="color: rgb(235, 108, 108);"><%if(checkeduser){%>
+                        <%=eroruser%>
+                        <%}%>
+                        </div>
+                        <div style="color: rgb(235, 108, 108);"><%if(checkAlphanumeric){%>
+                            <%=errorAlphanumeric%>
+                            <%}%>
+                            </div>
+                            <div style="color: rgb(235, 108, 108);"><%if(checkchar){%>
+                                <%=errorchar%>
+                                <%}%>
+                                </div>
+                    <input class="text email" style="margin-bottom: -0.8%;" id="Email" type="email" name="email" placeholder="Email" value="<%if(checkimg||checkeduser ||checkedemail){%><%=users.email%><%}%>" required="Enter your Email">
+                    <div style="color: rgb(235, 108, 108); top: 2%;margin-bottom: 8%;"><%if(checkedemail){%>
+                        <%=eroremail%>
+                        <%}%>
+                        </div>
+                    <div class="form-group pass_show">
+                        <input class="text password" type="password" id="pass" name="password" placeholder="Password" value="<%if(checkimg|| checkeduser ||checkedemail){%><%=users.password%><%}%>" required="Enter your Password">
+
+                    </div>
+                    
+                        <div class="form-group pass_show">
+                    <input class="text w3lpass" type="password" id="confpass" name="confirm" placeholder="Confirm Password" value="<%if(checkimg||checkeduser ||checkedemail){%><%=users.password%><%}%>" required="Enter your Password">
+                        </div>
+                        <div class="alert alert-warning password-alert" id="password-alert" role="alert">
+                            <ul>
+                              <li class="requirements leng"><i class="fas fa-check green-text" ></i><i class="fas fa-times red-text"></i> A password must be 8 between  and 13 characters.</li>
+                              <li class="requirements Consecutive"><i class="fas fa-check green-text" ></i><i class="fas fa-times red-text"></i> The password does not contain consecutive numbers.</li>
+                              <li class="requirements big-letter"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> Your password must have at least 1 big letter.</li>
+                              <li class="requirements small-letter"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> Your password must have at least 1 small letter.</li>
+                              <li class="requirements num"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> Your password must have at least 1 number.</li>
+                              <li class="requirements special-char"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> Your password must have at least 1 special char.</li>
+                            </ul>
+                          </div>
+                          <div class="alert alert-warning confpassword-alert" role="alert">
+                            <ul>
+                              <li class="confrequirements match"><i class="fas fa-check green-text" ></i><i class="fas fa-times red-text"></i> Passwords do not match'.</li>
+                            </ul>
+                          </div>
+                    <input type="submit" value="SIGNUP" onclick="checkEmails();onChange();">
+                </form>
+                <p>Do have an Account? <a href="/LogIn"> Login Now!</a></p>
+
+                    <div class="row justify-content-between">
+                        <div class="col-6 col-lg-5 col-md-4 col-xl-4 col-sm-5">
+                            <a class="btn" style="background-color: #5c52b8; color:white;" href="/SignUp/backHome">back Home</a>
+                        </div>
+                        <div class="col-6 col-lg-5 col-md-4 col-xl-4 col-sm-5">
+                            <a class="btn" style="background-color: #5c52b8; color:white;" href="/SignUp/backLogin">back Login</a>
+                        </div>
+                      </div>
+            </div>
+        </div>
+        <div class="colorlibcopy-agile">
+            <p>© 2021 movieouo Signup Form. All rights reserved </p>
+        </div>
+        <ul class="colorlib-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<!-- file upload itself is disabled in this pen -->
+<!-- partial -->
+  <script src='static/filepond/js/filepond-plugin-file-encode.min.js'></script>
+<script src='static/filepond/js/filepond-plugin-file-validate-type.min.js'></script>
+<script src='static/filepond/js/filepond-plugin-image-exif-orientation.min.js'></script>
+<script src='static/filepond/js/filepond-plugin-image-crop.min.js'></script>
+<script src='static/filepond/js/filepond-plugin-image-resize.min.js'></script>
+<script src='static/filepond/js/filepond-plugin-image-transform.min.js'></script>
+<script src='static/filepond/js/filepond-plugin-image-preview.min.js'></script>
+<script src='static/filepond/js/filepond.min.js'></script>
+<script src="js/checkEmail.js"></script>
+<script  src="js/FilePondProfile.js"></script>
+<script src="js/onchangepassword.js"> </script>    
+<script src="js/onselect.js"> </script>    
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/show_hide_pass.js"></script>
+
+
+</body>
+</html>

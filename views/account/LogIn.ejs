@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="css/account.css">
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="static/font/font.css" rel="stylesheet">    </head>
+    <body>
+        <!-- main -->
+        <div class="main-w3layouts wrapper">
+            <h1> LogIn Form</h1>
+            <div class="main-agileinfo">
+                <div class="agileits-top">
+                    <form action="/LogIn" method="post">
+                        <div style="color:rgb(235, 108, 108);" > 
+                            <% if (check) { %>
+                            <%=error%>
+                            <%}%>                                                   
+                        </div>
+                        <input class="text" type="text" name="User" placeholder="Username" value="<%if(check){%><%=user.username%><%}%>" required="">
+                        <div class="form-group pass_show">
+                        <input class="text" type="password" name="password" placeholder="Password" value="<%if(check){%><%=user.password%><%}%>" required="">
+                        </div>
+                        <input type="submit" value="SIGNUP">
+                    </form>
+                    <p>did you forget your password? <a href="/ChangePassword"> change Password Now!</a> or <a href="/SignUp"> SignUp Now!</a></p>
+                    <a class="btn " style="background-color: #5c52b8; color:white;" href="/LogIn/back">back</a>
+                </div>
+            </div>
+            <div class="colorlibcopy-agile">
+                <p>© 2021 movieouo LogIn Form. All rights reserved </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <ul class="colorlib-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- //main -->
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script src="static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/jquery/jquery.min.js"></script>
+        <script src="js/show_hide_pass.js"></script>
+
+    </body>
+    </html>
+
+
+
+

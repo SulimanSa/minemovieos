@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting</title>
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="css/home.css">
+
+
+    <script src="static/jquery/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>  
+
+	<div id="preloader">
+		<img class="logo" src="images/ico.png" alt="" width="119" height="58">
+        <h3 class="card-text bg-light" style="transform: rotate(0);">
+         Click <a href="http://www.<%=Email%>" class="text-warning stretched-link">here</a> to check the email
+        </h3>
+		
+    <div>
+        <h3 class="text-muted" style="margin-top: 15%; margin-bottom: 5%;">Loading...</h3>
+        <div id="status">
+			<span></span>
+			<span></span>
+		</div>
+        </div>
+	</div>
+
+<div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+</div>
+
+</body>
+</html>

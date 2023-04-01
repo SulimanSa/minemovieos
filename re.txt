@@ -1,0 +1,12 @@
+__VIEWSTATE=w0NreMQ3mxoqRoA55+nJTZ8glhpWTUZNkpqAOgrqnn1tOs8ixzyyRy7eRlJe2uMb1nYLcrAp9KwU4IRL+3sJaE9eY6ZOqjgY3H62OfLujms=
+__VIEWSTATEGENERATOR=34DEA991
+__EVENTVALIDATION=JQCgaBj5XxTxTFDHlS9VLUysYVgPI2iq7ZBeBfnp3YoPl+T2+9u309WjsQoHFgRfzSf2YfqgpCjCHIV0S8vwIXToBRZEcKN7OI5Z+sgIgH7BQrkSp13td6OnpOm8gcmx
+uid=Testing
+password=knkfnkbknb
+origUrl=/H%2fLogin.html%3fblga%3d162245101.1585439487%26_ga%3d2.103869188.506012092.1585439487-162245101.1585439487
+trackingCode=626335
+sysNum=23
+langNum=1
+remainingLoginAttempts=5
+authType=1
+
